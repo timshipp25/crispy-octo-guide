@@ -33,6 +33,9 @@ jobs:
           git config --local user.name "GitHub Action"
           git add -A
           git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
+
+      - name: pull files
+        run: |
           git pull --rebase origin main
           
       - name: push changes
