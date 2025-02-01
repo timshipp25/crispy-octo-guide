@@ -8,7 +8,8 @@ formatted_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
 
 try:
     SOME_SECRET = os.environ["SOME_SECRET"]
-    webhook = DiscordWebhook(url="https://discordapp.com/api/webhooks/{SOME_SECRET}", content=formatted_time)
+    thisurl = "https://discordapp.com/api/webhooks/{SOME_SECRET}"
+    webhook = DiscordWebhook(url=thisurl, content=formatted_time)
     response = webhook.execute()
 except KeyError:
     SOME_SECRET = "Token not available!"
