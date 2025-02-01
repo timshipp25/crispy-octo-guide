@@ -1,4 +1,5 @@
 import aiomysql
+import os
 from datetime import datetime
 
 DB_SECRET = os.environ["DB_SECRET"]
@@ -9,9 +10,9 @@ async def update_last_used(inip):
     connection = await aiomysql.connect(
         host='127.0.0.1',
         port=3306,
-        user='test',
-        password='Spider3573test',
-        db='u617291534_eps'
+        user=US_SECRET,
+        password=PW_SECRET,
+        db=DB_SECRET
     )
     
     async with connection.cursor() as cursor:
@@ -26,9 +27,9 @@ async def update_ip_success_fail(inip,type):
     connection = await aiomysql.connect(
         host='127.0.0.1',
         port=3306,
-        user='test',
-        password='Spider3573test',
-        db='u617291534_eps'
+        user=US_SECRET,
+        password=PW_SECRET,
+        db=DB_SECRET
     )
     
     async with connection.cursor() as cursor:
@@ -96,9 +97,9 @@ async def fetch_user_agents():
     connection = await aiomysql.connect(
         host='127.0.0.1',
         port=3306,
-        user='test',
-        password='Spider3573test',
-        db='u617291534_eps'
+        user=US_SECRET,
+        password=PW_SECRET,
+        db=DB_SECRET
     )
     
     async with connection.cursor() as cursor:
