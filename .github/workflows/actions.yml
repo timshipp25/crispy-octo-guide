@@ -24,6 +24,8 @@ jobs:
       - name: execute py script # run main.py
         env:
           SOME_SECRET: ${{ secrets.DISWH_SECRET }}
+          US_SECRET: ${{ secrets.US_SECRET }}
+          PW_SECRET: ${{ secrets.PW_SECRET }}
         run: python main.py
           
       - name: commit files
