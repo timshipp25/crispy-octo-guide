@@ -14,7 +14,7 @@ async def send_webhook(formatted_time):
 
     ip = await allCode(1)
     ipid = ip[0]
-    outtxt = formatted_time + " : " + ipid
+    outtxt = formatted_time + " : " + str(ipid)
 
     try:
         SOME_SECRET = os.environ["SOME_SECRET"]
