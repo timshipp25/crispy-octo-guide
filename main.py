@@ -20,7 +20,7 @@ async def send_webhook(formatted_time):
         SOME_SECRET = os.environ["SOME_SECRET"]
         thisurl = f"https://discordapp.com/api/webhooks/{SOME_SECRET}"
         webhook = DiscordWebhook(url=thisurl, content=outtxt)
-        response = await webhook.execute()
+        response = webhook.execute()
     except KeyError:
         SOME_SECRET = "Token not available!"
 
