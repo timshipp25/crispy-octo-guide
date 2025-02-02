@@ -8,7 +8,7 @@ PW_SECRET = os.environ["PW_SECRET"]
 
 async def update_last_used(inip):
     connection = await aiomysql.connect(
-        host='185.127.17.25',
+        host='185-127-17-25.cloud-xip.com',
         port=3306,
         user=US_SECRET,
         password=PW_SECRET,
@@ -25,7 +25,7 @@ async def update_last_used(inip):
 
 async def update_ip_success_fail(inip,type):
     connection = await aiomysql.connect(
-        host='185.127.17.25',
+        host='185-127-17-25.cloud-xip.com',
         port=3306,
         user=US_SECRET,
         password=PW_SECRET,
@@ -47,7 +47,7 @@ async def fetch_ip_addresses(fail_streak):
     print("Fail Streak: ",fail_streak)
 
     connection = await aiomysql.connect(
-        host='185.127.17.25',
+        host='185-127-17-25.cloud-xip.com',
         port=3306,
         user=US_SECRET,
         password=PW_SECRET,
@@ -95,7 +95,7 @@ async def fetch_ip_addresses(fail_streak):
 async def fetch_user_agents():
 
     connection = await aiomysql.connect(
-        host='185.127.17.25',
+        host='185-127-17-25.cloud-xip.com',
         port=3306,
         user=US_SECRET,
         password=PW_SECRET,
